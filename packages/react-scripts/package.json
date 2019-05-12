@@ -1,6 +1,6 @@
 {
   "name": "create-react-app-luctst",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Personal configuration for create-react-app.",
   "repository": {
     "type": "git",
@@ -14,6 +14,11 @@
   "bugs": {
     "url": "https://github.com/luctst/create-react-app/issues"
   },
+  "keywords": [
+    "create-react-app",
+    "reactjs",
+    "web-app-boilerplate"
+  ],
   "files": [
     "bin",
     "config",
@@ -83,7 +88,11 @@
   },
   "devDependencies": {
     "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react-dom": "^16.8.4",
+    "react-redux": "^7.0.3",
+    "react-router-dom": "^5.0.0",
+    "redux": "^4.0.1",
+    "styled-components": "^4.2.0"
   },
   "optionalDependencies": {
     "fsevents": "2.0.6"
