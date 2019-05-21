@@ -132,7 +132,7 @@ if (program.info) {
         System: ['OS', 'CPU'],
         Binaries: ['Node', 'npm', 'Yarn'],
         Browsers: ['Chrome', 'Edge', 'Internet Explorer', 'Firefox', 'Safari'],
-        npmPackages: ['react', 'react-dom', 'react-scripts'],
+        npmPackages: ['react', 'react-dom', "react-router-dom", "redux", "react-redux", "styled-components", "eslint", "prettier", 'react-scripts'],
         npmGlobalPackages: ['create-react-app'],
       },
       {
