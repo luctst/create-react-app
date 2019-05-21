@@ -89,7 +89,7 @@ module.exports = function(
   const useYarn = fs.existsSync(path.join(appPath, 'yarn.lock'));
     
   // Copy over some of the devDependencies
-  appPackage.dependencies = appPackage.dependencies || {};
+  appPackage.dependencies = appPackage.devDependencies || {};
 
   const useTypeScript = appPackage.dependencies['typescript'] != null;
 
@@ -164,7 +164,7 @@ module.exports = function(
     command = 'npm';
     args = ['install', '--save', verbose && '--verbose'].filter(e => e);
   }
-  args.push('react', 'react-dom', "redux", "react-redux", "react-router-dom", "styled-components", "prettier");
+  args.push('react', 'react-dom', "redux", "react-redux", "react-router-dom", "styled-components", "prettier", "eslint");
 
   // Install additional template dependencies, if present
   const templateDependenciesPath = path.join(
