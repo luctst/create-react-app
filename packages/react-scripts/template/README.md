@@ -2,16 +2,48 @@
 *This project exist because is it complicated to configurated your web-app, this repository is a starter-kit for quickly launch your app with all the tools you need.*
 > **Note** - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Features:
-* ReactJs.
+## Why a personal config to create-react-app ?
+When you create a lot of projects big, medium or little you generally use "approximately" the same structure, although create-react-app contains everything that i need to quickly coding i found that a few things was missing. That's why you will find in this repo:
+
+* Github config for your issues, pull requests.
+* A circleci config.
+* An editorconfig file.
+* A personal eslint config.
+* Prettier config.
+
+You will also find these packages which i think are really commun to a lot of react project:
+
 * Redux.
 * React-redux.
 * React-router-dom.
-* Jest.
 * Styled-components.
 * Eslint.
 * Prettier.
-> **Note** - This is the main library that you can use from now behind the scenes tools like Webpack, Babel will bundle, compile everything that you need to stay focus on code and not configuration.
+
+## Structure:
+```bash
+├── __tests__/	# folder for testing everything you want except UI test.
+├── .circleci/	# Config your circleci.
+├── .github/	# Files helper for your github repo
+├── public/		# Folder for production code.
+├── src/		# Contains development code.
+	├── assets/		# Assets files.
+		├── img/		# Hold your img.
+	├── components	# Folder for your presentational components get data and display them no logic.
+	├── container	# Hold you logic components opposite to components folder.
+	└── appState.js	# Hold the data of your app use this file if you're using Redux or createContext API etc..
+	└── index.js	# File entry point DO NOT DELETE.
+	└── serviceWorker.js	# Helpful for PWA.
+└── .editorconfig	# Config IDE
+└── .eslintignore	# Eslint files, folders list to ignore.
+└── .eslintrc.json	# Eslint config.
+└── .npmrc		# Npm config.
+└── .prettierrc	# Prettier config.
+└── .gitignore	# Git files, folders list to ignore.
+└── README.md	# README please :)
+```
+
+This is an idiomatic files structure :) of curse you're free to change, delete anything that you want be sure to change all the `import` concerned.
 
 ## Getting started:
 **Script availables:**
@@ -68,5 +100,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Start coding:
